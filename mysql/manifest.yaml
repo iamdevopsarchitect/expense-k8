@@ -2,25 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 matadata:
   name: mysql
-  namespace:  expense
+  namespace: expense
   labels:
-    app:  mysql
+    app: mysql
     tier: db
-    project:  expense
+    project: expense
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app:  mysql
+      app: mysql
       tier: db
-      project:  expense
+      project: expense
   template:
     metadata:
       labels:
-        app:  mysql
+        app: mysql
         tier: db
-        project:  expense
+        project: expense
     spec:
       containers:
       - name: mysql
-        image:  joindevops/mysql:v1
+        image: joindevops/mysql:v1
