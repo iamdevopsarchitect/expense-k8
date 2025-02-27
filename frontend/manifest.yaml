@@ -25,6 +25,14 @@ spec:
       containers:
       - name: frontend
         image: joindevops/frontend:v1
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+            # limits are grater than or equal to requests
+          limits:
+            cpu: 100m
+            memory: 128Mi
 
 ---
 kind: Service
